@@ -36,7 +36,7 @@ This command allows your system to forward packets between the target and gatewa
 ## Usage
 Run the ARP spoofing script with root privileges, specifying the network interface, gateway IP, and target IP:
 ```bash
-sudo python3 arp_spoofer.py -i <interface> <gateway_ip> <target_ip>
+sudo python3 spoofarp.py -i <interface> <gateway_ip> <target_ip>
 ```
 ### Example
 To spoof ARP packets between a gateway (`192.168.1.1`) and a target (`192.168.1.100`) on interface `eth0`:
@@ -50,7 +50,7 @@ sudo python3 spoofarp.py -i eth0 192.168.1.1 192.168.1.100
 To adjust the frequency of ARP packets, modify the `time.sleep(0.2)` value in the script (e.g., `time.sleep(1.0)` for 1-second intervals).
 
 ## Code Overview
-The script (`arp_spoofer.py`) performs the following:
+The script (`spoofarp.py`) performs the following:
 1. Checks for root privileges to ensure proper execution.
 2. Parses command-line arguments for the network interface, gateway IP, and target IP.
 3. Crafts two ARP packets:
